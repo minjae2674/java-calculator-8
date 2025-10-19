@@ -1,9 +1,9 @@
 # java-calculator-precourse
 
 ## 시작
-모델(M)
-입출력 받는 부분을 따로 구현(V)
-컨트롤러(C)
+모델(M)   
+입출력 받는 부분을 따로 구현(V)   
+컨트롤러(C)    
 
 # 문자열 덧셈 계산기
 
@@ -20,3 +20,19 @@
 - [ ] 숫자가 아닌 값이 입력되면 `IllegalArgumentException`을 발생시킨다.
 - [ ] 음수가 입력되면 `IllegalArgumentException`을 발생시킨다.
 - [ ] 최종 결과를 출력한다.
+
+## 📂 프로젝트 구조 (MVC 패턴)
+## 📂 프로젝트 구조
+
+````markdown
+src/
+ └── calculator/
+     ├── Application.java           ← main() (프로그램 시작)
+     ├── controller/
+     │    └── CalculatorController.java
+     ├── model/
+     │    └── Calculator.java
+     └── view/
+          ├── InputView.java
+          └── OutputView.java
+````
