@@ -1,16 +1,6 @@
 # java-calculator-precourse
 
-## 시작
-모델(M)   
-입출력 받는 부분을 따로 구현(V)   
-컨트롤러(C)    
-
-# 문자열 덧셈 계산기
-
-## 🚀 기능 요구 사항
-입력한 문자열에서 숫자를 추출하여 더하는 계산기를 구현한다.
-
----
+## 다시 시작---
 
 ## ✅ 구현할 기능 목록
 -기초 공사 전체 구조  
@@ -31,10 +21,9 @@
 src/
  └── calculator/
      ├── Application.java           ← main() (프로그램 시작)
-     ├── controller/
-     │    └── CalculatorController.java
-     ├── model/
-     │    └── Calculator.java
+     ├── calculate/
+     │    └── Operation.java
+     │    └── Plus.java
      └── view/
           ├── InputView.java
           └── OutputView.java

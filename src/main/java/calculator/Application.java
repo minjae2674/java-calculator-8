@@ -1,12 +1,21 @@
 package calculator;
 
+import calculate.Operation;
+import calculate.Plus;
 import camp.nextstep.edu.missionutils.Console;
-import controller.CalculatorController;
-import model.Calculator;
 
 public class Application {
+    Operation calculator = new Plus();
+
+
     public static void main(String[] args) {
-        // TODO: 프로그램 구현
-        new CalculatorController().run();
+        String str = Console.readLine();
+        String result = calculator.run(str);
+        System.out.println(result);
     }
+
+    static void run(String str) {
+        calculator.result(str);
+    }
+
 }
