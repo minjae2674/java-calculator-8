@@ -1,21 +1,17 @@
 package calculator;
 
-import calculate.Operation;
-import calculate.Plus;
 import camp.nextstep.edu.missionutils.Console;
 
 public class Application {
-    Operation calculator = new Plus();
-
-
     public static void main(String[] args) {
-        String str = Console.readLine();
-        String result = calculator.run(str);
-        System.out.println(result);
+        Calculator calculator = new Calculator(); //계산기 가져오기
+
+        System.out.println("덧셈할 문자열을 입력해 주세요.");
+        String str = Console.readLine(); //계산기에 입력값 넣기
+        int result = calculator.run(str); // 계산기 실행
+
+        System.out.println("결과 : " + result); //계산 값 출력
     }
 
-    static void run(String str) {
-        calculator.result(str);
-    }
 
 }
