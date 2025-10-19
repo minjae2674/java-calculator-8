@@ -1,5 +1,6 @@
 package controller;
 
+import model.Calculator;
 import view.InputView;
 import view.OutputView;
 
