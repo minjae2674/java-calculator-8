@@ -16,6 +16,7 @@ public class Calculator {
             numbers = input.substring(newlineIndex+1);
         }
 
+        String[] tokens = numbers.split(delimiter);
 
     }
 }
