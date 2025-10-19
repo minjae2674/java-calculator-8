@@ -5,5 +5,10 @@ public class Calculator {
         if (input == null || input.isBlank()) {
             return 0;
         }
+        String numbers = input;
+        String delimiter = "[,:]";
+
+
+
     }
 }
