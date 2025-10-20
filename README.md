@@ -2,29 +2,28 @@
 
 ## 다시 시작---
 
-## ✅ 구현할 기능 목록
--기초 공사 전체 구조  
--계산 기능 빼고 간단한 것들 구현  
--메인기능 Calculator 구현  
+## ✅ 구현할 기능 구조
+-확장에는 열려있고 수정에는 닫혀있게.  
+-확장과 수정의 범위는 개발자의 역량.  
+-계산기를 개발하고 있고, 이제 덧셈을 넣는 과정에서 생각할 확장은 아직 곱셈, 나눗셈 등의 연산추가  
+-따라서 인터페이스를 활용해 덧셈(Plus)를 만든다.  
+-일반적인 계산기(여기서는 Calculator)는 덧셈, 나눗셈, 곱셈 등의 연산의 기능이 모두 들어가 있으므로  
+각 연산(operation)기능이 추가되면 새로운 객체를 Calculator에 넣는다. 그러나 인터페이스로 만들었기에 계산기 객체에 덧셈기능을 넣었다 빼고 곱셈을 넣는 형태도 가능.  
+-덧셈을 하나의 책임으로 판단, 클래스 하나를 만든다. 메서드를 일단 하나만 만들었으나, 메서드 안의 if문을 메서드 여러개로 쪼개면 더 좋을 것 같다는 생각이 든다. 
+-view를 만들면 좋을 것 같다. MVC패턴 적용해보자.
 
-- [ ] 빈 문자열("") 입력 시 0을 반환한다.
-- [ ] 쉼표(,) 또는 콜론(:)을 구분자로 사용하는 문자열의 숫자 합을 반환한다.
-- [ ] 커스텀 구분자("//;\n1;2;3")를 지정할 수 있다.
-- [ ] 숫자가 아닌 값이 입력되면 `IllegalArgumentException`을 발생시킨다.
-- [ ] 음수가 입력되면 `IllegalArgumentException`을 발생시킨다.
-- [ ] 최종 결과를 출력한다.
 
 ## 📂 프로젝트 구조 (MVC 패턴)
 ## 📂 프로젝트 구조
 
 ````markdown
-src/
- └── calculator/
-     ├── Application.java           ← main() (프로그램 시작)
-     ├── calculate/
-     │    └── Operation.java
-     │    └── Plus.java
-     └── view/
-          ├── InputView.java
-          └── OutputView.java
+calculator 패키지
+    ㄴoperate(연산)패키지 
+        ㄴOperation인터페이스
+        ㄴPlus클래스
+    ㄴview패키지
+        ㄴInputView
+        ㄴOutputView
+    Application.java(컨트롤러)
+    Calculator.java(계산기 본체)
 ````
